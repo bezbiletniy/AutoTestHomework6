@@ -25,15 +25,18 @@ public class DataHelper {
     }
 
     @Value
-    public static class CardNumber {
-        private String cardNumber;
+    public static class CardInfo {
+        String number;
     }
 
-    public static CardNumber getCardNumber1() {
-        return new CardNumber("5559 0000 0000 0001");
-    }
-
-    public static CardNumber getCardNumber2() {
-        return new CardNumber("5559 0000 0000 0002");
+    public static CardInfo getCardInfo (String id) {
+        if (id.equals("1")) {
+            return new CardInfo("5559 0000 0000 0001");
+        }
+        if (id.equals("2")) {
+            return new CardInfo("5559 0000 0000 0002");
+        } else {
+            return new CardInfo("5559 0000 0000 0000");
+        }
     }
 }

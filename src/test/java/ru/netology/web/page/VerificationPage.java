@@ -6,8 +6,8 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class VerificationPage {
 
-    private SelenideElement verifyCode = $x("[data-test-id='code']//self::input");
-    private SelenideElement verifyButton = $x("[data-test-id='action-verify']");
+    private SelenideElement verifyCode = $x("//*[@data-test-id=\"code\"]//self::input");
+    private SelenideElement verifyButton = $x("//*[@data-test-id=\"action-verify\"]");
 
     public VerificationPage() {
         verifyCode.shouldBe(visible);
